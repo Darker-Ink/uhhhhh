@@ -1,10 +1,10 @@
 {
-  "Plugin-Class": "org.example.ExamplePlugin",
-  "Name": "Example Plugin",
+  "Plugin-Class": "org.darkerink.DisconnectPlugin",
+  "Name": "Disconnect Plugin",
   "Version": "${plugin_version}",
-  "Description": "Example rusherhack plugin",
+  "Description": "Disconnects you at some point idk",
   "Authors": [
-    "John200410"
+    "DarkerInk"
   ],
   "Minecraft-Versions": [
     "1.20.1"

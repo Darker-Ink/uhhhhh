@@ -23,7 +23,7 @@ public class DisconnectModule extends ToggleableModule {
 	private final NumberSetting<Integer> secondsSetting = new NumberSetting<>("Seconds", 0, 0, 60)
 			.incremental(1);
 
-	private final BooleanSetting disconnectAfterDisconnect = new BooleanSetting("Disconnect After Disconnect", true);
+	private final BooleanSetting disableAfterDisconnect = new BooleanSetting("Disable After Disconnect", true);
 
 	private long leaveDate;
 
@@ -34,7 +34,7 @@ public class DisconnectModule extends ToggleableModule {
 				this.hoursSetting,
 				this.minutesSetting,
 				this.secondsSetting,
-				this.disconnectAfterDisconnect
+				this.disableAfterDisconnect
 		);
 
 	}
@@ -70,7 +70,7 @@ public class DisconnectModule extends ToggleableModule {
 			if (currentSeconds >= this.leaveDate) {
 				this.leaveDate = 0L;
 
-				if (this.disconnectAfterDisconnect.getValue()) {
+				if (this.disableAfterDisconnect.getValue()) {
 					this.toggle();
 				}
 

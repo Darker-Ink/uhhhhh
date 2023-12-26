@@ -12,17 +12,18 @@ public class DisconnectPlugin extends Plugin {
 	
 	@Override
 	public void onLoad() {
+		this.getLogger().info("Disconnect Plugin loaded!");
 		RusherHackAPI.getModuleManager().registerFeature(new DisconnectModule());
 	}
 
 	@Override
 	public void onUnload() {
-		this.getLogger().info("Example plugin unloaded!");
+		this.getLogger().info("Disconnect Plugin unloaded!");
 	}
 	
 	@Override
 	public String getName() {
-		return "DisconnectModule";
+		return "Disconnect Plugin";
 	}
 	
 	@Override
